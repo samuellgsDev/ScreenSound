@@ -1,5 +1,20 @@
-﻿using ScreenSound.Menus;
+﻿using ScreenSound.Banco;
+using ScreenSound.Menus;
 using ScreenSound.Modelos;
+
+try
+{
+    using var connection = new Connection().obterConexao();
+    connection.Open();
+    Console.WriteLine(connection.State);
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Erro ao conectar com o banco de dados");
+
+}
+
+return;
 
 Artista ira = new Artista("Ira!", "Banda Ira!");
 Artista beatles = new("The Beatles", "Banda The Beatles");
