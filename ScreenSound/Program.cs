@@ -4,9 +4,14 @@ using ScreenSound.Modelos;
 
 try
 {
-    using var connection = new Connection().obterConexao();
-    connection.Open();
-    Console.WriteLine(connection.State);
+    var artistaDAL = new ArtistaDAL();
+    artistaDAL.Adicionar(new Artista("Ira!", "Banda Ira!"));
+    var listaArtistas = artistaDAL.Listar();
+
+    foreach (var artistas in listaArtistas ) 
+    {
+        Console.WriteLine(artistas);
+    }
 }
 catch (Exception ex)
 {

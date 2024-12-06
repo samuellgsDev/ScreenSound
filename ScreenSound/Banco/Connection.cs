@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
+using ScreenSound.Modelos;
 
 namespace ScreenSound.Banco;
 internal class Connection
 {
     private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ScreenSound;Integrated Security=True;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
 
-    public SqlConnection obterConexao()
-        {
-            return new SqlConnection(connectionString);
-        }
+    public SqlConnection ObterConexao()
+    {
+        return new SqlConnection(connectionString);
+    }
 }
 
