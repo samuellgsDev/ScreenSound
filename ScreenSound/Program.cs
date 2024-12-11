@@ -5,7 +5,8 @@ using ScreenSound.Modelos;
 try
 {
     var artistaDAL = new ArtistaDAL();
-    artistaDAL.Adicionar(new Artista("Ira!", "Banda Ira!"));
+    artistaDAL.Deletar(1);
+
     var listaArtistas = artistaDAL.Listar();
 
     foreach (var artistas in listaArtistas ) 
